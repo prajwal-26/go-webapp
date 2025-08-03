@@ -1,95 +1,150 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DevOps Journey</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Go DevOps Project – Prajwal</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-        header {
-            background-color: #333;
-            color: #fff;
-            padding: 10px 0;
-            text-align: center;
-        }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #1e1e1e;
+      color: #f0f0f0;
+      line-height: 1.6;
+    }
 
-        nav ul {
-            list-style-type: none;
-            padding: 0;
-        }
+    header {
+      background-color: #111;
+      padding: 20px 0;
+      text-align: center;
+    }
 
-        nav ul li {
-            display: inline;
-            margin-right: 10px;
-        }
+    header h1 {
+      font-size: 2rem;
+      color: #00bcd4;
+    }
 
-        nav ul li a {
-            color: #fff;
-            text-decoration: none;
-        }
+    nav ul {
+      list-style: none;
+      margin-top: 10px;
+    }
 
-        main {
-            padding: 20px;
-        }
+    nav ul li {
+      display: inline-block;
+      margin: 0 15px;
+    }
 
-        section {
-            margin-bottom: 20px;
-        }
+    nav ul li a {
+      color: #ccc;
+      text-decoration: none;
+      font-weight: 500;
+    }
 
-        footer {
-            background-color: #333;
-            color: #fff;
-            text-align: center;
-            padding: 10px 0;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-        }
-    </style>    
+    nav ul li a:hover {
+      color: #00bcd4;
+    }
+
+    main {
+      padding: 30px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    section {
+      margin-bottom: 40px;
+    }
+
+    h2 {
+      color: #00bcd4;
+      margin-bottom: 10px;
+    }
+
+    p {
+      color: #ccc;
+      font-size: 1rem;
+    }
+
+    footer {
+      background-color: #111;
+      text-align: center;
+      padding: 15px 0;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+
+    footer p {
+      color: #888;
+      font-size: 0.9rem;
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="home">Home</a></li>
-                <li><a href="about">About</a></li>
-                <li><a href="contact">Contact</a></li>
-                <li><a href="projects">Projects</a></li>
-            </ul>
-        </nav>
-    </header>
+  <header>
+    <h1>Go DevOps Implementation Project</h1>
+    <nav>
+      <ul>
+        <li><a href="#overview">Overview</a></li>
+        <li><a href="#tools">Tools</a></li>
+        <li><a href="#pipeline">CI/CD</a></li>
+        <li><a href="#deployment">Deployment</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <main>
-        <section>
-            <h1>Go complete DevOps implementation project</h1>
+  <main>
+    <section id="overview">
+      <h2>🔍 Project Overview</h2>
+      <p>
+        I'm Prajwal, and this is my end-to-end DevOps implementation using a Go web application.
+        The goal is to containerize, build CI/CD pipelines, deploy to Kubernetes using ArgoCD, and monitor on AWS EKS.
+      </p>
+    </section>
 
-            
-            <h2>DevOps Portfolio & Projects</h2>
-            <p>Welcome! This site showcases my hands-on journey with DevOps tools and cloud technologies. 
-               Explore the different projects and concepts I’ve worked on as part of my DevOps learning and implementation.
-            </p>
-        </section>
+    <section id="tools">
+      <h2>🛠️ Tools & Technologies</h2>
+      <p>
+        This project uses:
+        <ul>
+          <li>➡️ <strong>Go</strong> for backend application</li>
+          <li>➡️ <strong>Docker</strong> for containerization</li>
+          <li>➡️ <strong>GitHub Actions</strong> for CI</li>
+          <li>➡️ <strong>Kubernetes (EKS)</strong> for orchestration</li>
+          <li>➡️ <strong>Helm</strong> for package management</li>
+          <li>➡️ <strong>ArgoCD</strong> for continuous deployment</li>
+          <li>➡️ <strong>Ingress Controller</strong> for traffic routing</li>
+        </ul>
+      </p>
+    </section>
 
-        <section>
-            <h2>Overview</h2>
-            <p>Follow along as I build, deploy, and monitor applications using tools like Docker, Kubernetes, Jenkins, GitLab CI/CD, Prometheus, Grafana, Terraform, and AWS.</p>
-        </section>
+    <section id="pipeline">
+      <h2>⚙️ CI/CD Pipeline</h2>
+      <p>
+        Every push to GitHub triggers GitHub Actions which:
+        <ul>
+          <li>✔️ Builds the Docker image</li>
+          <li>✔️ Pushes to Docker Hub/ECR</li>
+          <li>✔️ Syncs Kubernetes manifests via ArgoCD</li>
+        </ul>
+      </p>
+    </section>
 
-        <section>
-            <h2>Project Showcase</h2>
-            <p>Check out the <a href="projects">Projects</a> section for detailed walkthroughs of CI/CD pipelines, infrastructure as code, and real-world cloud deployment scenarios.</p>  
-        </section>
-    </main>
+    <section id="deployment">
+      <h2>🚀 Deployment & Architecture</h2>
+      <p>
+        The app is deployed on <strong>AWS EKS</strong> with Ingress managing the routing and Helm used to manage the release.
+        All configurations and deployments are GitOps-based using ArgoCD.
+      </p>
+    </section>
+  </main>
 
-    <footer>
-        <p>&copy; Prajwal Patil</p>
-    </footer>
+  <footer>
+    <p>&copy; 2025 Prajwal Patil – DevOps Project</p>
+  </footer>
 </body>
 </html>
-
